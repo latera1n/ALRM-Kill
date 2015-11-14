@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeTextLabel;
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSRunLoop *runner;
+@property (weak, nonatomic) IBOutlet UIView *clockTopView;
+@property (weak, nonatomic) IBOutlet UIImageView *dotImageView;
 
 @end
 
@@ -56,9 +58,31 @@
     
     //  format and display the time
     NSString *currentTimeString = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
-    NSLog(@"Current hour = %@", currentTimeString);
+//    NSLog(@"Current hour = %@", currentTimeString);
     self.currentTimeTextLabel.text = currentTimeString;
 
+}
+
+- (IBAction)gestureHandler:(UIGestureRecognizer *)sender {
+    
+    if ([sender state] == UIGestureRecognizerStateBegan
+        ) {
+        self.dotImageView.hidden = false;
+    }
+    
+    if ([sender state] == UIGestureRecognizerStateChanged) {
+        CGPoint currentPoint = [sender locationInView:self.clockTopView];
+        CGPoint currentDotCenter = self.dotImageView.center;
+        NSLog(@"%f, %f", currentPoint.x, currentPoint.y);
+        currentDotCenter.x = currentPoint.x;
+        currentDotCenter.y = currentPoint.y;
+        self.dotImageView.center = currentDotCenter;
+    }
+    
+    if ([sender state] == UIGestureRecognizerStateEnded
+        ) {
+        self.dotImageView.hidden = true;
+    }
 }
 
 @end
