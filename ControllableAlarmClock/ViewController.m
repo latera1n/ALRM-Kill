@@ -11,6 +11,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *currentTimeTextLabel;
+@property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSRunLoop *runner;
 
 @end
 
@@ -28,8 +30,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)updateTimeDisplay {
+    NSDate *now = [NSDate dateWithTimeIntervalSinceNow: 0];
+    self.timer = [[NSTimer alloc] initWithFireDate:now
+                                          interval:1
+                                            target:self
+                                          selector:@selector(updateTime)
+                                          userInfo:nil
+                                           repeats:YES];
+    self.runner = [NSRunLoop currentRunLoop];
+    [self.runner addTimer:self.timer forMode:NSDefaultRunLoopMode];
+}
 
--(void)updateTimeDisplay {
+
+- (void)updateTime {
     //  use gregorian calendar for calendrical calculations
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
