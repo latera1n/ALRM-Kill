@@ -73,6 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clockCircleImageView" destination="MjY-Aa-NRO" id="Lev-5T-aYm"/>
                         <outlet property="clockTopView" destination="yuD-WN-ZQY" id="62Y-r4-Kcv"/>
                         <outlet property="currentTimeTextLabel" destination="8BV-gI-Ekv" id="bwV-r3-rrC"/>
                         <outlet property="dotImageView" destination="XLr-R2-Nau" id="f3a-sc-V6a"/>

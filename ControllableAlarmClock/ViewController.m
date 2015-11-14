@@ -15,6 +15,7 @@
 @property (strong, nonatomic) NSRunLoop *runner;
 @property (weak, nonatomic) IBOutlet UIView *clockTopView;
 @property (weak, nonatomic) IBOutlet UIImageView *dotImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *clockCircleImageView;
 
 @end
 
@@ -64,6 +65,7 @@
 }
 
 - (IBAction)gestureHandler:(UIGestureRecognizer *)sender {
+    CGPoint clockCenterPoint = self.clockCircleImageView.center;
     
     if ([sender state] == UIGestureRecognizerStateBegan
         ) {
@@ -74,8 +76,9 @@
         CGPoint currentPoint = [sender locationInView:self.clockTopView];
         CGPoint currentDotCenter = self.dotImageView.center;
         NSLog(@"%f, %f", currentPoint.x, currentPoint.y);
-        currentDotCenter.x = currentPoint.x;
-        currentDotCenter.y = currentPoint.y;
+        CGFloat radiusToClockCenter = sqrtf(powf(currentPoint.x - clockCenterPoint.x, 2.0) + powf(currentPoint.y - clockCenterPoint.y, 2.0));
+        currentDotCenter.x = clockCenterPoint.x + (98.5 / radiusToClockCenter) * (currentPoint.x - clockCenterPoint.x) + 4;
+        currentDotCenter.y = clockCenterPoint.y + (98.5 / radiusToClockCenter) * (currentPoint.y - clockCenterPoint.y) - 20;
         self.dotImageView.center = currentDotCenter;
     }
     
