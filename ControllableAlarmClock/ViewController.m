@@ -220,7 +220,9 @@ NSTimeInterval timeInterval = 0;
 }
 
 - (IBAction)wakeUp:(UIButton *)sender {
-    self.bluetoothSender = [[BlueToothMessageSender alloc] init];
+    if (self.bluetoothSender == nil ) {
+        self.bluetoothSender = [[BlueToothMessageSender alloc] init];
+    }
     [self.bluetoothSender begin];
 }
 
