@@ -253,20 +253,20 @@ bool isReceivedMessageFlag = NO;
 -(void)playSound {
     [self.alarmPlayer play];
     self.wakeUpAlert = [[UIAlertView alloc] initWithTitle:@"Wake up!"
-                                                    message:@"Wake up! Otherwise your roommate will kill you."
+                                                    message:@"Wake up! It's better to turn the alarm off by yourself."
                                                    delegate:self
-                                          cancelButtonTitle:@"OK😨"
-                                          otherButtonTitles:@"OK🤔", nil];
+                                          cancelButtonTitle:@"OK😴"
+                                          otherButtonTitles:@"OK😪", nil];
     [self.wakeUpAlert show];
 }
 
 -(void)stopPlayingSound {
     [self.wakeUpAlert dismissWithClickedButtonIndex:0 animated:NO];
     [self.alarmPlayer stop];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm Stopped"
-                                                    message:@"Wake up! Otherwise your roommate will kill you."
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm Stopped By Roomy"
+                                                    message:@"Good luck! 😨"
                                                    delegate:self
-                                          cancelButtonTitle:@"OK😨"
+                                          cancelButtonTitle:@"OK🙃"
                                           otherButtonTitles:@"OK🤔", nil];
     [alert show];
 }
