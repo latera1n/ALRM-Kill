@@ -10,7 +10,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "BlueToothMessageSender.h"
 
-@interface BlueToothMessageReceiver : NSObject <CBCentralManagerDelegate>
+@interface BlueToothMessageReceiver : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (strong, nonatomic) CBCentralManager      *centralManager;
 @property (strong, nonatomic) CBPeripheral          *discoveredPeripheral;

@@ -11,8 +11,11 @@
 @implementation BlueToothMessageSender
 
 - (instancetype) init {
-    self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
-    return [BlueToothMessageSender alloc];
+    if (self = [super init]) {
+        self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+    }
+    NSLog(@"Sender initialized");
+    return self;
 }
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
@@ -153,13 +156,12 @@
     }
 }
 
-- (void)peripheralManagerIsReadyToUpdateSubscribers:(CBPeripheralManager *)peripheral
-{
+- (void)peripheralManagerIsReadyToUpdateSubscribers:(CBPeripheralManager *)peripheral {
     // Start sending again
     [self sendData];
 }
 
-- (void)switchChanged {
+- (void)begin {
     // All we advertise is our service's UUID
     [self.peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]] }];
 }

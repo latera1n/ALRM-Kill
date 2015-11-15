@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSData                    *dataToSend;
 @property (nonatomic, readwrite) NSInteger              sendDataIndex;
 
-- (void)switchChanged;
+- (instancetype)init;
+- (void)begin;
 
 @end

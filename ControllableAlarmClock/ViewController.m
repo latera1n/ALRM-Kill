@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clockCircleImageView;
 @property (weak, nonatomic) IBOutlet UIButton *setButton;
 @property (weak, nonatomic) IBOutlet UILabel *alarmTimeTextLabel;
+@property (strong, nonatomic) BlueToothMessageReceiver *bluetoothReceiver;
+@property (strong, nonatomic) BlueToothMessageSender *bluetoothSender;
 
 @end
 
@@ -38,6 +40,7 @@ NSTimeInterval timeInterval = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(stopSoundingAlarm)
                                                  name:@"notification" object:nil];
+    self.bluetoothReceiver = [[BlueToothMessageReceiver alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -217,8 +220,8 @@ NSTimeInterval timeInterval = 0;
 }
 
 - (IBAction)wakeUp:(UIButton *)sender {
-    BlueToothMessageSender *blueToothSender = [[BlueToothMessageSender alloc] init];
-    [blueToothSender switchChanged];
+    self.bluetoothSender = [[BlueToothMessageSender alloc] init];
+    [self.bluetoothSender begin];
 }
 
 - (void)dealloc {
