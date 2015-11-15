@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AD1474081BF7A6A9007052F0 /* ControllableAlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControllableAlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1474081BF7A6A9007052F0 /* ALRM Kill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ALRM Kill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD14740C1BF7A6A9007052F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD14740E1BF7A6A9007052F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD14740F1BF7A6A9007052F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,10 +48,10 @@
 		AD1474151BF7A6A9007052F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD14741A1BF7A6A9007052F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD14741C1BF7A6A9007052F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD1474211BF7A6A9007052F0 /* ControllableAlarmClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllableAlarmClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD1474211BF7A6A9007052F0 /* ALRM Kill.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ALRM Kill.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1474251BF7A6A9007052F0 /* ControllableAlarmClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllableAlarmClockTests.m; sourceTree = "<group>"; };
 		AD1474271BF7A6A9007052F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD14742C1BF7A6A9007052F0 /* ControllableAlarmClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllableAlarmClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD14742C1BF7A6A9007052F0 /* ALRM Kill.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ALRM Kill.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1474301BF7A6A9007052F0 /* ControllableAlarmClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllableAlarmClockUITests.m; sourceTree = "<group>"; };
 		AD1474321BF7A6A9007052F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,9 +103,9 @@
 		AD1474091BF7A6A9007052F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD1474081BF7A6A9007052F0 /* ControllableAlarmClock.app */,
-				AD1474211BF7A6A9007052F0 /* ControllableAlarmClockTests.xctest */,
-				AD14742C1BF7A6A9007052F0 /* ControllableAlarmClockUITests.xctest */,
+				AD1474081BF7A6A9007052F0 /* ALRM Kill.app */,
+				AD1474211BF7A6A9007052F0 /* ALRM Kill.xctest */,
+				AD14742C1BF7A6A9007052F0 /* ALRM Kill.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD1474071BF7A6A9007052F0 /* ControllableAlarmClock */ = {
+		AD1474071BF7A6A9007052F0 /* ALRM Kill */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD1474351BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClock" */;
+			buildConfigurationList = AD1474351BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ALRM Kill" */;
 			buildPhases = (
 				AD1474041BF7A6A9007052F0 /* Sources */,
 				AD1474051BF7A6A9007052F0 /* Frameworks */,
@@ -172,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = ControllableAlarmClock;
+			name = "ALRM Kill";
 			productName = ControllableAlarmClock;
-			productReference = AD1474081BF7A6A9007052F0 /* ControllableAlarmClock.app */;
+			productReference = AD1474081BF7A6A9007052F0 /* ALRM Kill.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AD1474201BF7A6A9007052F0 /* ControllableAlarmClockTests */ = {
+		AD1474201BF7A6A9007052F0 /* ALRM KillTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD1474381BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClockTests" */;
+			buildConfigurationList = AD1474381BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ALRM KillTests" */;
 			buildPhases = (
 				AD14741D1BF7A6A9007052F0 /* Sources */,
 				AD14741E1BF7A6A9007052F0 /* Frameworks */,
@@ -190,14 +190,14 @@
 			dependencies = (
 				AD1474231BF7A6A9007052F0 /* PBXTargetDependency */,
 			);
-			name = ControllableAlarmClockTests;
+			name = "ALRM KillTests";
 			productName = ControllableAlarmClockTests;
-			productReference = AD1474211BF7A6A9007052F0 /* ControllableAlarmClockTests.xctest */;
+			productReference = AD1474211BF7A6A9007052F0 /* ALRM Kill.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AD14742B1BF7A6A9007052F0 /* ControllableAlarmClockUITests */ = {
+		AD14742B1BF7A6A9007052F0 /* ALRM KillUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD14743B1BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClockUITests" */;
+			buildConfigurationList = AD14743B1BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ALRM KillUITests" */;
 			buildPhases = (
 				AD1474281BF7A6A9007052F0 /* Sources */,
 				AD1474291BF7A6A9007052F0 /* Frameworks */,
@@ -208,9 +208,9 @@
 			dependencies = (
 				AD14742E1BF7A6A9007052F0 /* PBXTargetDependency */,
 			);
-			name = ControllableAlarmClockUITests;
+			name = "ALRM KillUITests";
 			productName = ControllableAlarmClockUITests;
-			productReference = AD14742C1BF7A6A9007052F0 /* ControllableAlarmClockUITests.xctest */;
+			productReference = AD14742C1BF7A6A9007052F0 /* ALRM Kill.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = HackSC15;
+				ORGANIZATIONNAME = HackMonkeys;
 				TargetAttributes = {
 					AD1474071BF7A6A9007052F0 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -238,7 +238,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AD1474031BF7A6A9007052F0 /* Build configuration list for PBXProject "ControllableAlarmClock" */;
+			buildConfigurationList = AD1474031BF7A6A9007052F0 /* Build configuration list for PBXProject "ALRM Kill" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -251,9 +251,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD1474071BF7A6A9007052F0 /* ControllableAlarmClock */,
-				AD1474201BF7A6A9007052F0 /* ControllableAlarmClockTests */,
-				AD14742B1BF7A6A9007052F0 /* ControllableAlarmClockUITests */,
+				AD1474071BF7A6A9007052F0 /* ALRM Kill */,
+				AD1474201BF7A6A9007052F0 /* ALRM KillTests */,
+				AD14742B1BF7A6A9007052F0 /* ALRM KillUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,12 +320,12 @@
 /* Begin PBXTargetDependency section */
 		AD1474231BF7A6A9007052F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AD1474071BF7A6A9007052F0 /* ControllableAlarmClock */;
+			target = AD1474071BF7A6A9007052F0 /* ALRM Kill */;
 			targetProxy = AD1474221BF7A6A9007052F0 /* PBXContainerItemProxy */;
 		};
 		AD14742E1BF7A6A9007052F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AD1474071BF7A6A9007052F0 /* ControllableAlarmClock */;
+			target = AD1474071BF7A6A9007052F0 /* ALRM Kill */;
 			targetProxy = AD14742D1BF7A6A9007052F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -436,11 +436,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ControllableAlarmClock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.hacksc15.ControllableAlarmClock;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.hackmonkeys.ALRM-Kill";
+				PRODUCT_NAME = "ALRM Kill";
 			};
 			name = Debug;
 		};
@@ -448,11 +449,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ControllableAlarmClock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.hacksc15.ControllableAlarmClock;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.hackmonkeys.ALRM-Kill";
+				PRODUCT_NAME = "ALRM Kill";
 			};
 			name = Release;
 		};
@@ -463,8 +465,8 @@
 				INFOPLIST_FILE = ControllableAlarmClockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.hacksc15.ControllableAlarmClockTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControllableAlarmClock.app/ControllableAlarmClock";
+				PRODUCT_NAME = "ALRM Kill";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ALRM Kill.app/ALRM Kill";
 			};
 			name = Debug;
 		};
@@ -475,8 +477,8 @@
 				INFOPLIST_FILE = ControllableAlarmClockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.hacksc15.ControllableAlarmClockTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControllableAlarmClock.app/ControllableAlarmClock";
+				PRODUCT_NAME = "ALRM Kill";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ALRM Kill.app/ALRM Kill";
 			};
 			name = Release;
 		};
@@ -486,7 +488,7 @@
 				INFOPLIST_FILE = ControllableAlarmClockUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.hacksc15.ControllableAlarmClockUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ALRM Kill";
 				TEST_TARGET_NAME = ControllableAlarmClock;
 				USES_XCTRUNNER = YES;
 			};
@@ -498,7 +500,7 @@
 				INFOPLIST_FILE = ControllableAlarmClockUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.hacksc15.ControllableAlarmClockUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ALRM Kill";
 				TEST_TARGET_NAME = ControllableAlarmClock;
 				USES_XCTRUNNER = YES;
 			};
@@ -507,7 +509,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD1474031BF7A6A9007052F0 /* Build configuration list for PBXProject "ControllableAlarmClock" */ = {
+		AD1474031BF7A6A9007052F0 /* Build configuration list for PBXProject "ALRM Kill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD1474331BF7A6A9007052F0 /* Debug */,
@@ -516,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD1474351BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClock" */ = {
+		AD1474351BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ALRM Kill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD1474361BF7A6A9007052F0 /* Debug */,
@@ -525,7 +527,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD1474381BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClockTests" */ = {
+		AD1474381BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ALRM KillTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD1474391BF7A6A9007052F0 /* Debug */,
@@ -534,7 +536,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD14743B1BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClockUITests" */ = {
+		AD14743B1BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ALRM KillUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD14743C1BF7A6A9007052F0 /* Debug */,
