@@ -35,6 +35,9 @@ NSTimeInterval timeInterval = 0;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self updateTimeDisplay];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(stopSoundingAlarm)
+                                                 name:@"notification" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -207,6 +210,23 @@ NSTimeInterval timeInterval = 0;
 
 - (void)soundAlarm {
     NSLog(@"Times up!");
+}
+
+- (void)stopSoundingAlarm {
+    [self reset];
+}
+
+- (IBAction)wakeUp:(UIButton *)sender {
+    BlueToothMessageSender *blueToothSender = [[BlueToothMessageSender alloc] init];
+    [blueToothSender switchChanged];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:@"notification"];
+}
+
+- (void)reset {
+    NSLog(@"Reset.");
 }
 
 @end

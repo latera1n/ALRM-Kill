@@ -69,6 +69,14 @@
                                     <outletCollection property="gestureRecognizers" destination="Oih-g9-jD6" appends="YES" id="g2u-dh-5Ym"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNM-9T-mQW">
+                                <rect key="frame" x="260" y="502" width="80" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Wake Up"/>
+                                <connections>
+                                    <action selector="wakeUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItN-eT-cYj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
