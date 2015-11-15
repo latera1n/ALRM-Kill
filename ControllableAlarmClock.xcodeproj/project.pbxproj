@@ -11,10 +11,10 @@
 		AD1474101BF7A6A9007052F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD14740F1BF7A6A9007052F0 /* AppDelegate.m */; };
 		AD1474131BF7A6A9007052F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1474121BF7A6A9007052F0 /* ViewController.m */; };
 		AD1474161BF7A6A9007052F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1474141BF7A6A9007052F0 /* Main.storyboard */; };
-		AD1474181BF7A6A9007052F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1474171BF7A6A9007052F0 /* Assets.xcassets */; };
 		AD14741B1BF7A6A9007052F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1474191BF7A6A9007052F0 /* LaunchScreen.storyboard */; };
 		AD1474261BF7A6A9007052F0 /* ControllableAlarmClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1474251BF7A6A9007052F0 /* ControllableAlarmClockTests.m */; };
 		AD1474311BF7A6A9007052F0 /* ControllableAlarmClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1474301BF7A6A9007052F0 /* ControllableAlarmClockUITests.m */; };
+		AD3DB39E1BF7E44D004C2500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		AD1474111BF7A6A9007052F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AD1474121BF7A6A9007052F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AD1474151BF7A6A9007052F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AD1474171BF7A6A9007052F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD14741A1BF7A6A9007052F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD14741C1BF7A6A9007052F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1474211BF7A6A9007052F0 /* ControllableAlarmClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllableAlarmClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,7 @@
 		AD14742C1BF7A6A9007052F0 /* ControllableAlarmClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllableAlarmClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1474301BF7A6A9007052F0 /* ControllableAlarmClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllableAlarmClockUITests.m; sourceTree = "<group>"; };
 		AD1474321BF7A6A9007052F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +101,12 @@
 		AD14740A1BF7A6A9007052F0 /* ControllableAlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */,
 				AD14740E1BF7A6A9007052F0 /* AppDelegate.h */,
 				AD14740F1BF7A6A9007052F0 /* AppDelegate.m */,
 				AD1474111BF7A6A9007052F0 /* ViewController.h */,
 				AD1474121BF7A6A9007052F0 /* ViewController.m */,
 				AD1474141BF7A6A9007052F0 /* Main.storyboard */,
-				AD1474171BF7A6A9007052F0 /* Assets.xcassets */,
 				AD1474191BF7A6A9007052F0 /* LaunchScreen.storyboard */,
 				AD14741C1BF7A6A9007052F0 /* Info.plist */,
 				AD14740B1BF7A6A9007052F0 /* Supporting Files */,
@@ -247,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD14741B1BF7A6A9007052F0 /* LaunchScreen.storyboard in Resources */,
-				AD1474181BF7A6A9007052F0 /* Assets.xcassets in Resources */,
+				AD3DB39E1BF7E44D004C2500 /* Assets.xcassets in Resources */,
 				AD1474161BF7A6A9007052F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +503,7 @@
 				AD1474371BF7A6A9007052F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD1474381BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClockTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				AD14743A1BF7A6A9007052F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD14743B1BF7A6A9007052F0 /* Build configuration list for PBXNativeTarget "ControllableAlarmClockUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +521,7 @@
 				AD14743D1BF7A6A9007052F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

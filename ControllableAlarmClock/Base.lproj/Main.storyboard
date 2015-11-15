@@ -19,21 +19,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-circle" translatesAutoresizingMaskIntoConstraints="NO" id="MjY-Aa-NRO">
-                                <rect key="frame" x="20" y="110" width="560" height="200"/>
+                                <rect key="frame" x="0.0" y="110" width="600" height="200"/>
                                 <animations/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-gI-Ekv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BV-gI-Ekv">
                                 <rect key="frame" x="20" y="170" width="560" height="60"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE4-pU-UgI">
-                                <rect key="frame" x="20" y="238" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="238" width="560" height="21"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -44,10 +44,26 @@
                                         <rect key="frame" x="88" y="131" width="8" height="8"/>
                                         <animations/>
                                     </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-sh-srZ">
+                                        <rect key="frame" x="515" y="8" width="65" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="JZE-Hk-B1k"/>
+                                            <constraint firstAttribute="height" constant="30" id="qpf-sQ-4Xl"/>
+                                        </constraints>
+                                        <state key="normal" title="Set" backgroundImage="button-border">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setAlarm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtG-A1-yrk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="afg-2l-cJ2"/>
+                                    <constraint firstItem="zZr-sh-srZ" firstAttribute="top" secondItem="yuD-WN-ZQY" secondAttribute="topMargin" id="kLY-dq-Yl8"/>
+                                    <constraint firstAttribute="trailing" secondItem="zZr-sh-srZ" secondAttribute="trailing" constant="20" id="svJ-Hx-lMa"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Oih-g9-jD6" appends="YES" id="g2u-dh-5Ym"/>
@@ -58,14 +74,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="MjY-Aa-NRO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="0n2-fo-8wZ"/>
                             <constraint firstItem="8BV-gI-Ekv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1ZF-dA-tVM"/>
-                            <constraint firstItem="MjY-Aa-NRO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3hR-py-AeH"/>
+                            <constraint firstItem="MjY-Aa-NRO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="5Xr-e0-Ahe"/>
                             <constraint firstItem="yuD-WN-ZQY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="E0i-fN-xXw"/>
-                            <constraint firstItem="MjY-Aa-NRO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FGZ-nP-QZc"/>
                             <constraint firstItem="hE4-pU-UgI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GLo-fv-KZO"/>
                             <constraint firstItem="hE4-pU-UgI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KMc-7n-oRA"/>
+                            <constraint firstItem="MjY-Aa-NRO" firstAttribute="trailing" secondItem="yuD-WN-ZQY" secondAttribute="trailing" id="PXx-z3-pzg"/>
                             <constraint firstItem="8BV-gI-Ekv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="VLC-Mv-JcG"/>
+                            <constraint firstItem="MjY-Aa-NRO" firstAttribute="leading" secondItem="yuD-WN-ZQY" secondAttribute="leading" id="adX-Yi-cOe"/>
                             <constraint firstItem="hE4-pU-UgI" firstAttribute="top" secondItem="8BV-gI-Ekv" secondAttribute="bottom" constant="8" id="bym-6C-rVB"/>
                             <constraint firstItem="8BV-gI-Ekv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kcd-7y-kzo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yuD-WN-ZQY" secondAttribute="trailing" constant="-20" id="lLr-9c-S50"/>
@@ -73,9 +89,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alarmTimeTextLabel" destination="hE4-pU-UgI" id="xmv-NG-nHM"/>
+                        <outlet property="clockCircleImageView" destination="MjY-Aa-NRO" id="Lev-5T-aYm"/>
                         <outlet property="clockTopView" destination="yuD-WN-ZQY" id="62Y-r4-Kcv"/>
                         <outlet property="currentTimeTextLabel" destination="8BV-gI-Ekv" id="bwV-r3-rrC"/>
                         <outlet property="dotImageView" destination="XLr-R2-Nau" id="f3a-sc-V6a"/>
+                        <outlet property="setButton" destination="zZr-sh-srZ" id="LHi-dC-a2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,6 +108,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="button-border" width="7" height="7"/>
         <image name="clock-circle" width="200" height="200"/>
         <image name="dot" width="8" height="8"/>
     </resources>
