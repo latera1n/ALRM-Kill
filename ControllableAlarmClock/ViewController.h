@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlueToothMessageSender.h"
 
 @interface ViewController : UIViewController
 

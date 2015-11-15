@@ -15,6 +15,8 @@
 		AD1474261BF7A6A9007052F0 /* ControllableAlarmClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1474251BF7A6A9007052F0 /* ControllableAlarmClockTests.m */; };
 		AD1474311BF7A6A9007052F0 /* ControllableAlarmClockUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1474301BF7A6A9007052F0 /* ControllableAlarmClockUITests.m */; };
 		AD3DB39E1BF7E44D004C2500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */; };
+		AD3DB3A11BF828FC004C2500 /* BlueToothMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3DB3A01BF828FC004C2500 /* BlueToothMessageSender.m */; };
+		AD3DB3A41BF82E75004C2500 /* BlueToothMessageReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3DB3A31BF82E75004C2500 /* BlueToothMessageReceiver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		AD1474301BF7A6A9007052F0 /* ControllableAlarmClockUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControllableAlarmClockUITests.m; sourceTree = "<group>"; };
 		AD1474321BF7A6A9007052F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD3DB39F1BF828FC004C2500 /* BlueToothMessageSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothMessageSender.h; sourceTree = "<group>"; };
+		AD3DB3A01BF828FC004C2500 /* BlueToothMessageSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothMessageSender.m; sourceTree = "<group>"; };
+		AD3DB3A21BF82E75004C2500 /* BlueToothMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothMessageReceiver.h; sourceTree = "<group>"; };
+		AD3DB3A31BF82E75004C2500 /* BlueToothMessageReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothMessageReceiver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,11 @@
 				AD1474141BF7A6A9007052F0 /* Main.storyboard */,
 				AD1474191BF7A6A9007052F0 /* LaunchScreen.storyboard */,
 				AD14741C1BF7A6A9007052F0 /* Info.plist */,
+				AD3DB3A21BF82E75004C2500 /* BlueToothMessageReceiver.h */,
+				AD3DB3A31BF82E75004C2500 /* BlueToothMessageReceiver.m */,
 				AD14740B1BF7A6A9007052F0 /* Supporting Files */,
+				AD3DB39F1BF828FC004C2500 /* BlueToothMessageSender.h */,
+				AD3DB3A01BF828FC004C2500 /* BlueToothMessageSender.m */,
 			);
 			path = ControllableAlarmClock;
 			sourceTree = "<group>";
@@ -276,6 +286,8 @@
 				AD1474131BF7A6A9007052F0 /* ViewController.m in Sources */,
 				AD1474101BF7A6A9007052F0 /* AppDelegate.m in Sources */,
 				AD14740D1BF7A6A9007052F0 /* main.m in Sources */,
+				AD3DB3A11BF828FC004C2500 /* BlueToothMessageSender.m in Sources */,
+				AD3DB3A41BF82E75004C2500 /* BlueToothMessageReceiver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
