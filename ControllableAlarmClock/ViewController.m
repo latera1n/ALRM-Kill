@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *alarmTimeTextLabel;
 @property (strong, nonatomic) BlueToothMessageReceiver *bluetoothReceiver;
 @property (strong, nonatomic) BlueToothMessageSender *bluetoothSender;
+@property (strong, nonatomic) AVAudioPlayer *alarmPlayer;
 
 @end
 
@@ -37,10 +38,9 @@ NSTimeInterval timeInterval = 0;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self updateTimeDisplay];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(stopSoundingAlarm)
-                                                 name:@"notification" object:nil];
+    [self addNotificationObserver];
     self.bluetoothReceiver = [[BlueToothMessageReceiver alloc] init];
+    [self prepareAlarmPlayer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -179,6 +179,7 @@ NSTimeInterval timeInterval = 0;
 
 - (void)setAlarmTime {
     if (timeInterval == 0) {
+        [self reset];
         return;
     }
     [self startCountDown];
@@ -205,7 +206,8 @@ NSTimeInterval timeInterval = 0;
     self.alarmTimeTextLabel.text = currentTimeString;
     
     timeInterval--;
-    if (timeInterval <= 0.0) {
+    if (timeInterval < 0.0) {
+        [self.CountdownTimer invalidate];
         [self soundAlarm];
         timeInterval = 0;
     }
@@ -213,10 +215,12 @@ NSTimeInterval timeInterval = 0;
 
 - (void)soundAlarm {
     NSLog(@"Times up!");
+    [self playSound];
 }
 
 - (void)stopSoundingAlarm {
-    [self reset];
+    [self removeNotificationObserver];
+    [self stopPlayingSound];
 }
 
 - (IBAction)wakeUp:(UIButton *)sender {
@@ -227,11 +231,63 @@ NSTimeInterval timeInterval = 0;
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:@"notification"];
+    [self removeNotificationObserver];
+    [self addNotificationObserver];
 }
 
 - (void)reset {
-    NSLog(@"Reset.");
+    NSLog(@"Reset");
+    self.currentTimeTextLabel.text = @"--:--";
+    [self updateTimeDisplay];
+}
+
+-(void)playSound {
+    [self.alarmPlayer play];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wake up!"
+                                                    message:@"Wake up! Otherwise your roommate will kill you."
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK😨"
+                                          otherButtonTitles:@"OK🤔", nil];
+    [alert show];
+}
+
+-(void)stopPlayingSound {
+    [self.alarmPlayer stop];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm Stopped"
+                                                    message:@"Wake up! Otherwise your roommate will kill you."
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK😨"
+                                          otherButtonTitles:@"OK🤔", nil];
+    [alert show];
+}
+
+- (void)removeNotificationObserver {
+    [[NSNotificationCenter defaultCenter] removeObserver:@"notification"];
+}
+
+- (void)addNotificationObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(stopSoundingAlarm)
+                                                 name:@"notification"
+                                               object:nil];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self addNotificationObserver];
+    [self reset];
+    if (self.alarmPlayer.isPlaying) {
+        [self.alarmPlayer stop];
+    }
+}
+
+- (void)prepareAlarmPlayer {
+    NSString *alarmFileString = [[NSBundle mainBundle] pathForResource:@"classic-iphone-ringtone" ofType:@"mp3"];
+    NSURL *alarmFileURL = [NSURL fileURLWithPath:alarmFileString];
+    self.alarmPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:alarmFileURL error:nil];
+    self.alarmPlayer.delegate = self;
+    self.alarmPlayer.volume = 1;
+    self.alarmPlayer.numberOfLoops = 5;
+    [self.alarmPlayer prepareToPlay];
 }
 
 @end

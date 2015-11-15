@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BlueToothMessageSender.h"
 #import "BlueToothMessageReceiver.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AVAudioPlayerDelegate, UIAlertViewDelegate>
 
 
 @end

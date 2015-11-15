@@ -17,6 +17,8 @@
 		AD3DB39E1BF7E44D004C2500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */; };
 		AD3DB3A11BF828FC004C2500 /* BlueToothMessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3DB3A01BF828FC004C2500 /* BlueToothMessageSender.m */; };
 		AD3DB3A41BF82E75004C2500 /* BlueToothMessageReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3DB3A31BF82E75004C2500 /* BlueToothMessageReceiver.m */; };
+		AD3DB3A61BF851B1004C2500 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD3DB3A51BF851B1004C2500 /* AVFoundation.framework */; };
+		AD3DB3A81BF85435004C2500 /* classic-iphone-ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD3DB3A71BF85435004C2500 /* classic-iphone-ringtone.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		AD3DB3A01BF828FC004C2500 /* BlueToothMessageSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothMessageSender.m; sourceTree = "<group>"; };
 		AD3DB3A21BF82E75004C2500 /* BlueToothMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothMessageReceiver.h; sourceTree = "<group>"; };
 		AD3DB3A31BF82E75004C2500 /* BlueToothMessageReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothMessageReceiver.m; sourceTree = "<group>"; };
+		AD3DB3A51BF851B1004C2500 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AD3DB3A71BF85435004C2500 /* classic-iphone-ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "classic-iphone-ringtone.mp3"; path = "../../../Downloads/classic-iphone-ringtone.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3DB3A61BF851B1004C2500 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,7 @@
 		AD1473FF1BF7A6A9007052F0 = {
 			isa = PBXGroup;
 			children = (
+				AD3DB3A51BF851B1004C2500 /* AVFoundation.framework */,
 				AD14740A1BF7A6A9007052F0 /* ControllableAlarmClock */,
 				AD1474241BF7A6A9007052F0 /* ControllableAlarmClockTests */,
 				AD14742F1BF7A6A9007052F0 /* ControllableAlarmClockUITests */,
@@ -107,6 +113,7 @@
 		AD14740A1BF7A6A9007052F0 /* ControllableAlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				AD3DB3A71BF85435004C2500 /* classic-iphone-ringtone.mp3 */,
 				AD3DB39D1BF7E44D004C2500 /* Assets.xcassets */,
 				AD14740E1BF7A6A9007052F0 /* AppDelegate.h */,
 				AD14740F1BF7A6A9007052F0 /* AppDelegate.m */,
@@ -258,6 +265,7 @@
 			files = (
 				AD14741B1BF7A6A9007052F0 /* LaunchScreen.storyboard in Resources */,
 				AD3DB39E1BF7E44D004C2500 /* Assets.xcassets in Resources */,
+				AD3DB3A81BF85435004C2500 /* classic-iphone-ringtone.mp3 in Resources */,
 				AD1474161BF7A6A9007052F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
