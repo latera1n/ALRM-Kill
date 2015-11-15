@@ -11,34 +11,31 @@
 @implementation BlueToothMessageReceiver
 
 - (instancetype)init {
-    // Start up the CBCentralManager
-    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    
-    // And somewhere to store the incoming data
-    self.data = [[NSMutableData alloc] init];
-    
-    return [BlueToothMessageReceiver alloc];
+    if (self = [super init]) {
+        // Start up the CBCentralManager
+        self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        // And somewhere to store the incoming data
+        self.data = [[NSMutableData alloc] init];
+    }
+    NSLog(@"Receiver initialized");
+    return self;
 }
 
-- (void)centralManagerDidUpdateState:(CBCentralManager *)central
-{
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     if (central.state != CBCentralManagerStatePoweredOn) {
         // In a real app, you'd deal with all the states correctly
         return;
     }
     
     // The state must be CBCentralManagerStatePoweredOn...
-    
     // ... so start scanning
     [self scan];
     
 }
 
-- (void)scan
-{
+- (void)scan {
     [self.centralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]]
                                                 options:@{ CBCentralManagerScanOptionAllowDuplicatesKey : @YES }];
-    
     NSLog(@"Scanning started");
 }
 
