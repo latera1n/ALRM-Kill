@@ -23,6 +23,7 @@
 @property (strong, nonatomic) BlueToothMessageReceiver *bluetoothReceiver;
 @property (strong, nonatomic) BlueToothMessageSender *bluetoothSender;
 @property (strong, nonatomic) AVAudioPlayer *alarmPlayer;
+@property (strong, nonatomic) UIAlertView *wakeUpAlert;
 
 @end
 
@@ -33,13 +34,14 @@ double previousYMovementCalibrited = -98.5;
 int revolutionCount = 0;
 double degreeThisRound = 0.0;
 NSTimeInterval timeInterval = 0;
+bool isReceivedMessageFlag = NO;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self setNeedsStatusBarAppearanceUpdate];
     [self updateTimeDisplay];
     [self addNotificationObserver];
-    self.bluetoothReceiver = [[BlueToothMessageReceiver alloc] init];
     [self prepareAlarmPlayer];
 }
 
@@ -215,12 +217,17 @@ NSTimeInterval timeInterval = 0;
 
 - (void)soundAlarm {
     NSLog(@"Times up!");
+    if (self.bluetoothReceiver == nil) {
+        self.bluetoothReceiver = [[BlueToothMessageReceiver alloc] init];
+    }
     [self playSound];
 }
 
 - (void)stopSoundingAlarm {
-    [self removeNotificationObserver];
-    [self stopPlayingSound];
+    if (!isReceivedMessageFlag) {
+        isReceivedMessageFlag = YES;
+        [self stopPlayingSound];
+    }
 }
 
 - (IBAction)wakeUp:(UIButton *)sender {
@@ -232,26 +239,29 @@ NSTimeInterval timeInterval = 0;
 
 - (void)dealloc {
     [self removeNotificationObserver];
-    [self addNotificationObserver];
 }
 
 - (void)reset {
     NSLog(@"Reset");
     self.currentTimeTextLabel.text = @"--:--";
     [self updateTimeDisplay];
+    isReceivedMessageFlag = NO;
+    self.bluetoothReceiver = nil;
+    self.bluetoothSender = nil;
 }
 
 -(void)playSound {
     [self.alarmPlayer play];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Wake up!"
+    self.wakeUpAlert = [[UIAlertView alloc] initWithTitle:@"Wake up!"
                                                     message:@"Wake up! Otherwise your roommate will kill you."
                                                    delegate:self
                                           cancelButtonTitle:@"OK😨"
                                           otherButtonTitles:@"OK🤔", nil];
-    [alert show];
+    [self.wakeUpAlert show];
 }
 
 -(void)stopPlayingSound {
+    [self.wakeUpAlert dismissWithClickedButtonIndex:0 animated:NO];
     [self.alarmPlayer stop];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alarm Stopped"
                                                     message:@"Wake up! Otherwise your roommate will kill you."
@@ -273,11 +283,10 @@ NSTimeInterval timeInterval = 0;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    [self addNotificationObserver];
-    [self reset];
     if (self.alarmPlayer.isPlaying) {
         [self.alarmPlayer stop];
     }
+    [self reset];
 }
 
 - (void)prepareAlarmPlayer {
@@ -288,6 +297,10 @@ NSTimeInterval timeInterval = 0;
     self.alarmPlayer.volume = 1;
     self.alarmPlayer.numberOfLoops = 5;
     [self.alarmPlayer prepareToPlay];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end
