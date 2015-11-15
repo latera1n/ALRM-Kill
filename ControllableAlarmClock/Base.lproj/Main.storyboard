@@ -18,7 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-circle" translatesAutoresizingMaskIntoConstraints="NO" id="MjY-Aa-NRO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="nXI-Nm-3Vv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-circle-2" translatesAutoresizingMaskIntoConstraints="NO" id="MjY-Aa-NRO">
                                 <rect key="frame" x="0.0" y="110" width="600" height="200"/>
                                 <animations/>
                                 <gestureRecognizers/>
@@ -27,64 +31,70 @@
                                 <rect key="frame" x="20" y="170" width="560" height="60"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE4-pU-UgI">
-                                <rect key="frame" x="20" y="238" width="560" height="20.5"/>
+                                <rect key="frame" x="20" y="238" width="560" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuD-WN-ZQY">
                                 <rect key="frame" x="0.0" y="20" width="600" height="400"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-R2-Nau">
-                                        <rect key="frame" x="0.0" y="-20" width="8" height="8"/>
-                                        <animations/>
-                                    </imageView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-sh-srZ">
-                                        <rect key="frame" x="500" y="8" width="80" height="30"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot-3" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-R2-Nau">
+                                        <rect key="frame" x="0.0" y="-20" width="25" height="25"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="JZE-Hk-B1k"/>
-                                            <constraint firstAttribute="height" constant="30" id="qpf-sQ-4Xl"/>
+                                            <constraint firstAttribute="width" constant="25" id="e8v-KZ-wAs"/>
+                                            <constraint firstAttribute="height" constant="25" id="jZe-Iw-TtC"/>
                                         </constraints>
-                                        <state key="normal" title="Set" backgroundImage="button-border">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZr-sh-srZ">
+                                        <rect key="frame" x="200" y="370" width="200" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="BY9-lB-Wfh"/>
+                                            <constraint firstAttribute="height" constant="30" id="nmN-Ay-Tpp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Set" backgroundImage="button-border-2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="setAlarm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtG-A1-yrk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNM-9T-mQW">
-                                        <rect key="frame" x="20" y="8" width="80" height="30"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="LgH-0J-IU7"/>
-                                            <constraint firstAttribute="height" constant="30" id="WOU-ta-uFE"/>
-                                        </constraints>
-                                        <state key="normal" title="Wake Up" backgroundImage="button-border">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="wakeUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItN-eT-cYj"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="fNM-9T-mQW" firstAttribute="top" secondItem="yuD-WN-ZQY" secondAttribute="top" constant="8" id="BmF-o1-Fro"/>
-                                    <constraint firstItem="fNM-9T-mQW" firstAttribute="leading" secondItem="yuD-WN-ZQY" secondAttribute="leading" constant="20" id="J8J-m2-H3F"/>
+                                    <constraint firstItem="XLr-R2-Nau" firstAttribute="leading" secondItem="yuD-WN-ZQY" secondAttribute="leading" id="3ze-Rz-bRg"/>
+                                    <constraint firstItem="XLr-R2-Nau" firstAttribute="top" secondItem="yuD-WN-ZQY" secondAttribute="top" constant="-20" id="BwS-fd-EbX"/>
+                                    <constraint firstItem="zZr-sh-srZ" firstAttribute="centerX" secondItem="yuD-WN-ZQY" secondAttribute="centerX" id="Fj3-Su-LY4"/>
                                     <constraint firstAttribute="height" constant="400" id="afg-2l-cJ2"/>
-                                    <constraint firstItem="zZr-sh-srZ" firstAttribute="top" secondItem="yuD-WN-ZQY" secondAttribute="topMargin" id="kLY-dq-Yl8"/>
-                                    <constraint firstAttribute="trailing" secondItem="zZr-sh-srZ" secondAttribute="trailing" constant="20" id="svJ-Hx-lMa"/>
+                                    <constraint firstAttribute="bottom" secondItem="zZr-sh-srZ" secondAttribute="bottom" id="two-GW-iqA"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Oih-g9-jD6" appends="YES" id="g2u-dh-5Ym"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNM-9T-mQW">
+                                <rect key="frame" x="200" y="550" width="200" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nBI-13-aWz"/>
+                                    <constraint firstAttribute="width" constant="200" id="sJN-Zz-Zun"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Wake Up Roommate" backgroundImage="button-border-3">
+                                    <color key="titleColor" red="0.90980392156862744" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="wakeUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItN-eT-cYj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -96,10 +106,16 @@
                             <constraint firstItem="hE4-pU-UgI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GLo-fv-KZO"/>
                             <constraint firstItem="hE4-pU-UgI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KMc-7n-oRA"/>
                             <constraint firstItem="MjY-Aa-NRO" firstAttribute="trailing" secondItem="yuD-WN-ZQY" secondAttribute="trailing" id="PXx-z3-pzg"/>
+                            <constraint firstAttribute="bottom" secondItem="fNM-9T-mQW" secondAttribute="bottom" constant="20" symbolic="YES" id="Sem-bn-5AG"/>
+                            <constraint firstItem="nXI-Nm-3Vv" firstAttribute="trailing" secondItem="MjY-Aa-NRO" secondAttribute="trailing" id="UBs-Pt-vdq"/>
                             <constraint firstItem="8BV-gI-Ekv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="VLC-Mv-JcG"/>
+                            <constraint firstItem="nXI-Nm-3Vv" firstAttribute="leading" secondItem="yuD-WN-ZQY" secondAttribute="leading" id="a0B-ia-Rfw"/>
                             <constraint firstItem="MjY-Aa-NRO" firstAttribute="leading" secondItem="yuD-WN-ZQY" secondAttribute="leading" id="adX-Yi-cOe"/>
                             <constraint firstItem="hE4-pU-UgI" firstAttribute="top" secondItem="8BV-gI-Ekv" secondAttribute="bottom" constant="8" id="bym-6C-rVB"/>
+                            <constraint firstItem="nXI-Nm-3Vv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="g3R-n1-WN6"/>
+                            <constraint firstItem="fNM-9T-mQW" firstAttribute="centerX" secondItem="hE4-pU-UgI" secondAttribute="centerX" id="hra-A0-l6O"/>
                             <constraint firstItem="8BV-gI-Ekv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kcd-7y-kzo"/>
+                            <constraint firstItem="nXI-Nm-3Vv" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="kph-hX-st1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yuD-WN-ZQY" secondAttribute="trailing" constant="-20" id="lLr-9c-S50"/>
                             <constraint firstItem="yuD-WN-ZQY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="wsN-Mv-bhQ"/>
                         </constraints>
@@ -124,8 +140,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="button-border" width="7" height="7"/>
-        <image name="clock-circle" width="200" height="200"/>
-        <image name="dot" width="8" height="8"/>
+        <image name="button-border-2" width="7" height="7"/>
+        <image name="button-border-3" width="7" height="7"/>
+        <image name="clock-circle-2" width="200" height="200"/>
+        <image name="dot-3" width="25" height="25"/>
+        <image name="launch" width="337" height="600"/>
     </resources>
 </document>
